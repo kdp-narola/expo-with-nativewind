@@ -50,7 +50,7 @@ export default function ChartsScreen() {
             </ChartCard>
 
             <ChartCard title="🖊️ Area Chart" theme={theme}>
-              <AreaChartBox data={[3, 5, 4, 7, 5]} labels={["1", "2", "3", "4", "5"]} width={chartWidth} height={220} theme={theme} />
+              <AreaChartBox data={[2, 5, 1, 3, 7]} labels={["Amroli", "Adajan", "Vesu", "Kosad", "Rander"]} width={chartWidth} height={220} theme={theme} />
             </ChartCard>
 					</View>
 				</ScrollView>

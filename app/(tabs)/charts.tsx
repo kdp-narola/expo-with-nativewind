@@ -18,7 +18,7 @@ export default function ChartsScreen() {
 	else if (width >= 640) columns = 2;
 	else columns = 1;
 
-	const padding = 16;
+	const padding = width >= 640 ? 32 : 16;
 	const chartWidth = (width - padding * (columns + 1)) / columns;
 	const chartHeight = Math.min(chartWidth, 300);
 
@@ -36,7 +36,7 @@ export default function ChartsScreen() {
 				</Text>
 
 				<ScrollView className="flex-1 p-4">
-					<View className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+					<View className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2 md:gap-5">
 						<ChartCard title="📈 Line Chart" theme={theme}>
               <LineChartBox data={[3, 5, 2, 6, 4]} labels={["1", "2", "3", "4", "5"]} width={chartWidth} height={chartHeight} theme={theme} />
             </ChartCard>
